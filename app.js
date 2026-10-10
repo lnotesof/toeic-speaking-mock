@@ -210,9 +210,10 @@ function fmt(seconds) {
 */
 
 function safeFileName(name) {
+
   return name
-    .normalize('NFC')
-    .replace(/[^\p{L}\p{N}_.-]/gu, '_')
+    .normalize('NFKD')
+    .replace(/[^\w.-]/g, '_')
     .replace(/_+/g, '_')
     .replace(/^_+|_+$/g, '')
     .slice(0, 50) || 'student';
@@ -809,8 +810,8 @@ async function uploadRecording(
         student_Q1.webm
   */
 
-  const questionLabel = String(questionNumber).padStart(2, '0');
-  const filePath = `tests/${safeName}/${testId}_Q${questionLabel}.webm`;
+  const filePath =
+    `tests/${safeName}/${testId}_Q${questionNumber}.webm`;
 
 
   console.log(
