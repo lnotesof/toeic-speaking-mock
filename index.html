@@ -49,178 +49,213 @@
     </div>
   </header>
 
-  <!-- 시험 목록 -->
-  <section class="test-list" id="testList" aria-label="시험 목록">
+ 
+<!-- 과목 폴더 및 시험 목록 -->
+<section class="subject-folders" id="subjectFolders" aria-label="과목 선택">
 
-    <button class="test-card active-test" id="toeicTestCard" type="button">
-      <span>
-        <span class="test-name">TOEIC Speaking Test</span>
-        <span class="test-description">Q1–Q11 · 녹음 시험</span>
-      </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </button>
+  <button class="subject-folder" id="toeicFolder" type="button">
+    <span class="folder-icon" aria-hidden="true">📁</span>
+    <span class="folder-name">TOEIC Speaking</span>
+    <span class="folder-description">토익스피킹 모의고사</span>
+  </button>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 1</span>
-        <span class="test-description">준비 중</span>
+  <button class="subject-folder" id="opicFolder" type="button">
+    <span class="folder-icon" aria-hidden="true">📁</span>
+    <span class="folder-name">OPIc</span>
+    <span class="folder-description">오픽 연습</span>
+  </button>
+
+  <button class="subject-folder" id="conversationFolder" type="button">
+    <span class="folder-icon" aria-hidden="true">📁</span>
+    <span class="folder-name">English Conversation</span>
+    <span class="folder-description">영어 회화</span>
+  </button>
+
+  <button class="subject-folder" id="otherFolder" type="button">
+    <span class="folder-icon" aria-hidden="true">📁</span>
+    <span class="folder-name">Other</span>
+    <span class="folder-description">기타 학습</span>
+  </button>
+
+</section>
+
+<!-- 시험 목록 -->
+<section class="test-list" id="testList" aria-label="시험 목록" hidden>
+
+  <button class="folder-back" id="backToFolders" type="button">
+    ← 과목 선택
+  </button>
+
+  <button class="test-card active-test" id="toeicTestCard" type="button">
+    <span>
+      <span class="test-name">TOEIC Speaking Test</span>
+      <span class="test-description">Q1–Q11 · 녹음 시험</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </button>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 2</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 1</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 3</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 2</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 4</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 3</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 5</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 4</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 6</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 5</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 7</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 6</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 8</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 7</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 9</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 8</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 10</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 9</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 11</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 10</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 12</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 11</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 13</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 12</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 14</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 13</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 15</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 14</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 16</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 15</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 17</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 16</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 18</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 17</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 19</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 18</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-    <div class="test-card unavailable" aria-disabled="true">
-      <span>
-        <span class="test-name">Test 20</span>
-        <span class="test-description">준비 중</span>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 19</span>
+      <span class="test-description">준비 중</span>
     </span>
-      <span class="test-arrow" aria-hidden="true">›</span>
-    </div>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
 
-  </section>
+  <div class="test-card unavailable" aria-disabled="true">
+    <span>
+      <span class="test-name">Test 20</span>
+      <span class="test-description">준비 중</span>
+    </span>
+    <span class="test-arrow" aria-hidden="true">›</span>
+  </div>
+
+</section>
+
 
   <!-- 스크롤 안내 표시 -->
   <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true">

@@ -983,6 +983,36 @@ $('beginTestBtn').onclick = () => {
   requestAnimationFrame(updateScrollIndicator);
 };
 
+// TOEIC Speaking 폴더 열기
+$('toeicFolder').onclick = () => {
+  $('subjectFolders').hidden = true;
+  $('testList').hidden = false;
+
+  window.scrollTo(0, 0);
+  requestAnimationFrame(updateScrollIndicator);
+};
+
+// 과목 폴더 화면으로 돌아가기
+$('backToFolders').onclick = () => {
+  $('testList').hidden = true;
+  $('subjectFolders').hidden = false;
+
+  window.scrollTo(0, 0);
+};
+
+// 준비 중인 폴더
+$('opicFolder').onclick = () => {
+  alert('OPIc 콘텐츠는 준비 중입니다.');
+};
+
+$('conversationFolder').onclick = () => {
+  alert('영어 회화 콘텐츠는 준비 중입니다.');
+};
+
+$('otherFolder').onclick = () => {
+  alert('추가 콘텐츠는 준비 중입니다.');
+};
+
 // 시험 목록에서 TOEIC Speaking Test를 선택한 뒤에만 시험 시작
 $('toeicTestCard').onclick = () => {
   if (!micReady || !micStream) {

@@ -439,3 +439,69 @@ button:focus-visible {
     font-size: 26px;
   }
 }
+
+/* 과목 폴더 화면 */
+.subject-folders {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.subject-folder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-height: 145px;
+  padding: 18px;
+  border: 1px solid #e1e5ed;
+  border-radius: 16px;
+  background: #fff;
+  color: #202938;
+  text-align: left;
+  cursor: pointer;
+}
+
+.folder-icon {
+  font-size: 34px;
+}
+
+.folder-name {
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.folder-description {
+  color: #778196;
+  font-size: 12px;
+}
+
+.folder-back {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px solid #e1e5ed;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* hidden 속성이 붙은 화면은 확실하게 숨김 */
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 380px) {
+  .subject-folders {
+    gap: 10px;
+  }
+
+  .subject-folder {
+    min-height: 130px;
+    padding: 13px;
+  }
+
+  .folder-name {
+    font-size: 14px;
+  }
+}
