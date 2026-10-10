@@ -216,7 +216,7 @@ function safeFileName(name) {
     .replace(/_+/g, '_')
     .replace(/^_+|_+$/g, '')
     .slice(0, 50) || 'student';
-    
+
 }
 
 
@@ -809,8 +809,8 @@ async function uploadRecording(
         student_Q1.webm
   */
 
-  const filePath =
-    `tests/${safeName}/${testId}_Q${questionNumber}.webm`;
+  const questionLabel = String(questionNumber).padStart(2, '0');
+  const filePath = `tests/${safeName}/${testId}_Q${questionLabel}.webm`;
 
 
   console.log(
