@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FEL TOEIC Speaking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- 1. FEL logo intro -->
+  <section id="introScreen" class="intro-screen" aria-label="FEL intro">
+    <img src="fellogo.png" alt="FEL 어학원 로고" class="fellogo">
+  </section>
+
+  <!-- 2. Login and real microphone test -->
+  <main id="loginScreen" class="app login-screen hidden">
+    <section class="card login-card">
+      <div class="login-header">
+        <img src="fellogo.png" alt="FEL 어학원 로고" class="login-logo">
+      </div>
+
+      <label for="studentName">수강생 성명</label>
+      <input id="studentName" type="text" placeholder="이름을 입력하세요" autocomplete="name">
+
+      <div class="mic-block">
+        <button id="micBtn" class="primary full-width" type="button">마이크 허용 및 테스트</button>
+        <div id="micStatus" class="status">마이크 대기 중</div>
+        <div class="meter">
+          <div id="micMeter"></div>
+        </div>
+      </div>
+
+      <button id="beginTestBtn" class="success full-width hidden" type="button">시험 목록으로 이동</button>
+    </section>
+  </main>
+
+  
+<!-- 3. Test selection list -->
+<main id="nextScreen" class="next-screen hidden">
+
+  <!-- 상단 영역: 기존 그대로 유지 -->
+  <header class="list-header">
+    <img src="fellogo.png" alt="FEL 어학원 로고" class="list-logo">
+    <div>
+      <h1>시험 선택</h1>
+      <p><span id="welcomeName"></span>님, 응시할 시험을 선택하세요.</p>
+    </div>
+  </header>
+
+  <!-- 시험 목록 -->
+  <section class="test-list" id="testList" aria-label="시험 목록">
+
+    <button class="test-card active-test" id="toeicTestCard" type="button">
+      <span>
+        <span class="test-name">TOEIC Speaking Test</span>
+        <span class="test-description">Q1–Q11 · 녹음 시험</span>
+      </span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </button>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 1</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 2</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 3</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 4</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 5</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 6</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 7</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 8</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 9</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 10</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 11</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 12</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 13</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 14</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 15</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 16</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 17</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 18</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 19</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+    <div class="test-card unavailable" aria-disabled="true">
+      <span><span class="test-name">Test 20</span><span class="test-description">준비 중</span></span>
+      <span class="test-arrow" aria-hidden="true">›</span>
+    </div>
+
+  </section>
+
+  <!-- 스크롤 안내 표시 -->
+  <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true">
+    <span></span>
+  </div>
+
+</main>
+
+
+  <!-- 4. Existing test UI -->
+  <main id="testScreen" class="app hidden">
+    <header class="topbar">
+      <strong>FEL TOEIC Speaking</strong>
+      <span id="progress">Q1 / 11</span>
+    </header>
+    <div class="card test-card">
+      <div class="meta">
+        <span id="phaseLabel">준비 시간</span>
+        <span id="timer">00:45</span>
+      </div>
+      <div id="questionType" class="question-type"></div>
+      <h2 id="questionTitle"></h2>
+      <div id="questionBody" class="question-body"></div>
+      <div id="recordingStatus" class="recording-status">녹음 대기</div>
+      <div class="meter">
+        <div id="meterBar"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 5. Completion -->
+  <main id="doneScreen" class="app hidden">
+    <section class="card done-card">
+      <div class="badge">완료</div>
+      <h1>시험이 끝났습니다.</h1>
+      <p id="doneMessage"></p>
+      <button id="restartBtn" class="primary" type="button">처음으로</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
